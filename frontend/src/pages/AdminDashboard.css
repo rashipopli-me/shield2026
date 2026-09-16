@@ -1,0 +1,256 @@
+.dash {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: calc(100vh - 68px);
+}
+
+.dash__sidebar {
+  border-right: 1px solid var(--line);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.dash__brand {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.dash__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.dash__nav button {
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 14.5px;
+  cursor: pointer;
+}
+
+.dash__nav button:hover {
+  color: var(--text);
+}
+
+.dash__nav button.is-active {
+  background: var(--panel);
+  color: var(--text);
+}
+
+.dash__footer {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+
+.dash__user {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.dash__logout {
+  width: 100%;
+}
+
+.dash__main {
+  padding: 36px 40px;
+  overflow-x: hidden;
+}
+
+.overview__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.overview__head h1 {
+  font-size: 24px;
+}
+
+.overview__head p {
+  margin-top: 6px;
+  font-size: 13.5px;
+}
+
+.overview__sessions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.session-card {
+  padding: 22px;
+}
+
+.session-card__label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.session-card__big {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.session-card__bar {
+  margin-top: 14px;
+  height: 8px;
+  background: var(--ink);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.session-card__bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+.session-card__nums {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.overview__table {
+  margin-bottom: 24px;
+  padding: 22px;
+}
+
+.overview__table-title {
+  font-weight: 600;
+  font-size: 14.5px;
+  margin-bottom: 16px;
+}
+
+.overview__scroll {
+  overflow-x: auto;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+th {
+  text-align: left;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 12px;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: var(--panel);
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.overview__pct {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.overview__empty {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 24px;
+}
+
+.upload h1,
+.participants h1,
+.export h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.upload p {
+  font-size: 14px;
+  max-width: 560px;
+  margin-bottom: 20px;
+}
+
+.upload__form {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.upload__form input[type="file"] {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.upload__result {
+  padding: 20px;
+}
+
+.upload__errors {
+  margin-top: 12px;
+  padding-left: 18px;
+  color: var(--bad);
+  font-size: 13px;
+}
+
+.participants__search {
+  background: var(--ink);
+  border: 1px solid var(--line);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  width: 280px;
+  outline: none;
+}
+
+.participants__search:focus {
+  border-color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .dash {
+    grid-template-columns: 1fr;
+  }
+  .dash__sidebar {
+    flex-direction: row;
+    align-items: center;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    overflow-x: auto;
+  }
+  .dash__nav {
+    flex-direction: row;
+  }
+  .dash__footer {
+    border-top: none;
+  }
+  .dash__main {
+    padding: 24px 20px;
+  }
+  .overview__sessions {
+    grid-template-columns: 1fr;
+  }
+}

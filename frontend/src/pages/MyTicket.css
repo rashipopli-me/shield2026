@@ -1,0 +1,36 @@
+.myticket {
+  min-height: calc(100vh - 68px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.myticket--center {
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+}
+
+.myticket__intro {
+  max-width: 480px;
+}
+
+.myticket__eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.myticket__intro h1 {
+  font-size: 28px;
+}
+
+.myticket__intro p {
+  margin-top: 12px;
+  font-size: 14.5px;
+}
